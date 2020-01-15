@@ -1,0 +1,23 @@
+﻿<Window x:Class="MusicProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MusicProject"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="1.5*"/>
+        </Grid.RowDefinitions>
+        <ListBox x:Name="musics" Grid.Row="0" BorderThickness="1" BorderBrush="Black" MouseDoubleClick="SelectMusic"/>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <Rectangle Name="rect1" Height="50" Fill="Blue"/>
+            <Button Content="Запустить" Width="200" Click="PlayMusic" />
+            <MediaElement Name="music" Width="200" LoadedBehavior="Manual"/>
+            <TextBlock Name="load" Visibility="Hidden" Width="200"/>
+        </StackPanel>
+    </Grid>
+</Window>
